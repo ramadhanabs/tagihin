@@ -35,8 +35,6 @@ const LoginPage = () => {
       .catch(error => {
         const errorCode = error.code;
         const errorMessage = error.message;
-
-        console.log("🚀 ~s handleLogin ~ errorCode:", errorCode, errorMessage);
       })
       .finally(() => {
         setIsLoading(false);

@@ -42,7 +42,6 @@ const CreditPanel = ({
   });
 
   const refetchCreditor = () => {
-    console.log("refetching..");
     queryClient.invalidateQueries({ queryKey: ["users", "creditors"] });
   };
 
@@ -137,7 +136,6 @@ const CreditPanel = ({
         }
       }
     } catch (error: any) {
-      console.log("🚀 ~ handleSubmit ~ error:", error);
       notifications.show({
         title: "Failed to submit data",
         message: "Oops, something happened",

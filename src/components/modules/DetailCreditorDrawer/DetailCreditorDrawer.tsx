@@ -30,7 +30,6 @@ const DetailCreditorDrawer = ({ opened, close }: DetailCreditorDrawerProps) => {
 
     return extractedData.find(item => item.id === selectedId);
   }, [creditorsQuery.data, selectedId]);
-  console.log("🚀 ~ creditorsData ~ creditorsData:", creditorsData, selectedId);
 
   const creditorTransactionLogQuery = useCreditorTransactionLogs(userData?.uid ?? "", selectedId);
   const transactionLogData = useMemo(() => {

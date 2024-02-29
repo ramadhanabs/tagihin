@@ -123,7 +123,10 @@ const DashboardPage = () => {
               ) : (
                 <>
                   {topCreditorData.map(creditor => (
-                    <div className="pb-3 border-b border-gray-800 flex items-center justify-between">
+                    <div
+                      key={creditor.id}
+                      className="pb-3 border-b border-gray-800 flex items-center justify-between"
+                    >
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 rounded-full bg-white overflow-hidden">
                           <img
